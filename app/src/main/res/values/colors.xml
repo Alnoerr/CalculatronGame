@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="darkSlateGrey">#FF2F4F4F</color>
+    <color name="maroon">#FF800000</color>
+    <color name="fireBrick">#FFB22222</color>
+    <color name="indianRed">#FFCD5C5C</color>
+    <color name="chocolate">#FFD2691E</color>
+    <color name="olive">#FF808000</color>
+    <color name="paleGreen">#FF98FB98</color>
+    <color name="forestGreen">#FF228B22</color>
+    <color name="mediumAquamarine">#FF66CDAA</color>
+    <color name="midnightBlue">#FF3030AA</color>
+    <color name="indigo">#FF4B0082</color>
+    <color name="bone">#FFE0DDCA</color>
+    <color name="gray">#FF808080</color>
+    <color name="lightGrey">#FFD3D3D3</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

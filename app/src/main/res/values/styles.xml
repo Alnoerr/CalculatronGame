@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="calculatorButton" parent="android:style/Widget.Button">
+        <item name="android:background">@drawable/calc_button</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:text">@string/button</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:fontFamily">@font/pixeleum_48</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="calculatorText" parent="android:style/Widget.TextView">
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/pixeleum_48</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="calculatorTextNoSize" parent="android:style/Widget.TextView">
+        <item name="android:fontFamily">@font/pixeleum_48</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="technoText" parent="android:style/Widget.TextView">
+        <item name="android:text">@string/zero</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">80sp</item>
+        <item name="android:fontFamily">@font/technology_bold</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>
