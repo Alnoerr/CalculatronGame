@@ -3,7 +3,7 @@
     <string name="main_title">Calculatron\nGame</string>
     <string name="start_game">Начать&#xA0;игру</string>
     <string name="continue_game">Продолжить\nигру</string>
-    <string name="clear_progress">Отчистить\nпрогресс</string>
+    <string name="clear_progress">Очистить\nпрогресс</string>
     <string name="how_to_play">Как&#xA0;играть?</string>
     <string name="levels_title">Уровни</string>
     <string name="level">Уровень:</string>
