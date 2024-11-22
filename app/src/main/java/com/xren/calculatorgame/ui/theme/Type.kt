@@ -20,9 +20,7 @@ val Typography = Typography(
         fontWeight = FontWeight.Bold,
         fontSize = 24.sp,
         textAlign = TextAlign.Center,
-        color = Color.White,
-        lineHeight = 24.sp,
-        letterSpacing = 0.5.sp
+        color = Color.White
     ),
     displayLarge = TextStyle(
         fontFamily = Pixeleum_48,
