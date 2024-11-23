@@ -1,6 +1,5 @@
 package com.xren.calculatorgame.ui.screen
 
-import android.content.Intent
 import android.view.MotionEvent
 import androidx.annotation.StringRes
 import androidx.compose.foundation.background
@@ -8,9 +7,9 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.defaultMinSize
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.size
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -25,24 +24,25 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.paint
 import androidx.compose.ui.input.pointer.pointerInteropFilter
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.role
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.xren.calculatorgame.GuideActivity
-import com.xren.calculatorgame.LevelsActivity
 import com.xren.calculatorgame.R
 import com.xren.calculatorgame.ui.theme.Bone
 import com.xren.calculatorgame.ui.theme.CalculatorGameTheme
 
 @Composable
-fun StartScreen(modifier: Modifier = Modifier) {
-    val context = LocalContext.current
-
+fun StartScreen(
+    onStartGameClick: () -> Unit,
+    onClearProgressClick: () -> Unit,
+    onGuideClick: () -> Unit,
+    modifier: Modifier = Modifier
+) {
     Column(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -59,26 +59,24 @@ fun StartScreen(modifier: Modifier = Modifier) {
 
         CalculatronButton(
             text = R.string.start_game,
-            onClick = { context.startActivity(Intent(context, LevelsActivity::class.java)) }
+            onClick = onStartGameClick,
+            width = 256.dp
         )
 
         Spacer(Modifier.height(32.dp))
 
         CalculatronButton(
             text = R.string.clear_progress,
-            onClick = {
-//                val save = getSharedPreferences("Save", MODE_PRIVATE)
-//                val editor: SharedPreferences.Editor = save.edit()
-//                editor.putInt("level", 1)
-//                editor.apply()
-            }
+            onClick = onClearProgressClick,
+            width = 256.dp
         )
 
         Spacer(Modifier.height(32.dp))
 
         CalculatronButton(
             text = R.string.how_to_play,
-            onClick = { context.startActivity(Intent(context, GuideActivity::class.java)) }
+            onClick = onGuideClick,
+            width = 256.dp
         )
     }
 }
@@ -88,7 +86,9 @@ fun StartScreen(modifier: Modifier = Modifier) {
 fun CalculatronButton(
     @StringRes text: Int,
     onClick: () -> Unit,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    width: Dp = 100.dp,
+    height: Dp = 100.dp
 ) {
     var pressed by remember { mutableStateOf(false) }
 
@@ -110,9 +110,9 @@ fun CalculatronButton(
                 }
                 true
             }
-            .defaultMinSize(
-                minWidth = 256.dp,
-                minHeight = 100.dp
+            .size(
+                width = width,
+                height = height
             )
             .paint(
                 painter = painterResource(
@@ -136,7 +136,7 @@ fun CalculatronButton(
 private fun StartScreenPreview() {
     CalculatorGameTheme {
         Surface {
-            StartScreen()
+            StartScreen({}, {}, {})
         }
     }
 }
@@ -147,7 +147,8 @@ private fun CalculatronButtonPreview() {
     CalculatorGameTheme {
         CalculatronButton(
             text = R.string.start_game,
-            onClick = {}
+            onClick = {},
+            width = 256.dp
         )
     }
 }
