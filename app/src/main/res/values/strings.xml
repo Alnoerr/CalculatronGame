@@ -18,4 +18,5 @@
     <string name="want2continueqm">Перейти&#xA0;к\nследующему?</string>
     <string name="want2go2menuqm">В&#xA0;главное\nменю.</string>
     <string name="menu">Меню.</string>
+    <string name="navigate_back">Назад</string>
 </resources>
