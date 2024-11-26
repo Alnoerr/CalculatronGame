@@ -8,9 +8,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
-import com.xren.calculatorgame.CalculatronGameTopBar
 import com.xren.calculatorgame.R
 import com.xren.calculatorgame.ui.theme.CalculatorGameTheme
+import com.xren.calculatorgame.ui.utils.CalculatronGameTopBar
 
 @Composable
 fun GuideScreen(
