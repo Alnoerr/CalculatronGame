@@ -14,35 +14,42 @@ val Pixeleum_48 = FontFamily(
     Font(R.font.pixeleum_48, FontWeight.Normal)
 )
 
+val Technology = FontFamily(
+    Font(R.font.technology, FontWeight.Normal),
+    Font(R.font.technology_bold, FontWeight.Bold)
+)
+
 val Typography = Typography(
     bodyLarge = TextStyle(
         fontFamily = Pixeleum_48,
         fontWeight = FontWeight.Bold,
         fontSize = 24.sp,
-        textAlign = TextAlign.Center,
-        color = Color.White
+        color = Color.White,
+        textAlign = TextAlign.Center
+    ),
+    bodyMedium = TextStyle(
+        fontFamily = Pixeleum_48,
+        fontWeight = FontWeight.Bold,
+        fontSize = 18.sp,
+        color = PaleGreen
     ),
     displayLarge = TextStyle(
+        fontFamily = Technology,
+        fontWeight = FontWeight.Bold,
+        fontSize = 80.sp,
+        color = Color.Black
+    ),
+    displayMedium = TextStyle(
         fontFamily = Pixeleum_48,
         fontWeight = FontWeight.Bold,
         fontSize = 50.sp,
-        textAlign = TextAlign.Center,
         color = Color.Black,
-    )
-    /* Other default text styles to override
-    titleLarge = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Normal,
-        fontSize = 22.sp,
-        lineHeight = 28.sp,
-        letterSpacing = 0.sp
+        textAlign = TextAlign.Center
     ),
-    labelSmall = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Medium,
-        fontSize = 11.sp,
-        lineHeight = 16.sp,
-        letterSpacing = 0.5.sp
+    displaySmall = TextStyle(
+        fontFamily = Pixeleum_48,
+        fontWeight = FontWeight.Bold,
+        fontSize = 30.sp,
+        textAlign = TextAlign.Center
     )
-    */
 )

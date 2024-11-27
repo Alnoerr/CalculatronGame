@@ -8,6 +8,7 @@ import androidx.datastore.preferences.core.emptyPreferences
 import androidx.datastore.preferences.core.intPreferencesKey
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
 import java.io.IOException
 
@@ -31,9 +32,14 @@ class CalculatronGameRepository(
         .map { preferences ->
             preferences[LEVEL] ?: 1
         }
-    suspend fun updateLevel(level: Int) {
+    suspend fun clearProgress() {
         dataStore.edit { preferences ->
-            preferences[LEVEL] = level
+            preferences[LEVEL] = 1
+        }
+    }
+    suspend fun incrementLevel() {
+        dataStore.edit { preferences ->
+            preferences[LEVEL] = level.first() + 1
         }
     }
 }

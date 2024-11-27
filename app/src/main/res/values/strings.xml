@@ -6,9 +6,9 @@
     <string name="clear_progress">Очистить\nпрогресс</string>
     <string name="how_to_play">Как&#xA0;играть?</string>
     <string name="levels_title">Уровни</string>
-    <string name="level">Уровень:</string>
-    <string name="target">Цель:</string>
-    <string name="moves">Ходы:</string>
+    <string name="level">Уровень: %d</string>
+    <string name="target">Цель: %d</string>
+    <string name="moves">Ходы: %d</string>
     <string name="hint">HINT</string>
     <string name="button">Button</string>
     <string name="zero">0</string>

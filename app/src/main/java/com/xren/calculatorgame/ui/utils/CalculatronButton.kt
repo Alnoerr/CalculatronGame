@@ -1,6 +1,7 @@
 package com.xren.calculatorgame.ui.utils
 
 import android.view.MotionEvent
+import androidx.annotation.DrawableRes
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.size
@@ -23,6 +24,7 @@ import androidx.compose.ui.semantics.role
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import com.xren.calculatorgame.R
 import com.xren.calculatorgame.ui.theme.CalculatorGameTheme
@@ -35,7 +37,10 @@ fun CalculatronButton(
     modifier: Modifier = Modifier,
     width: Dp = 128.dp,
     height: Dp = 100.dp,
-    enabled: Boolean = true
+    enabled: Boolean = true,
+    @DrawableRes image: Int = R.drawable.calculator_button_grey_fullsize,
+    @DrawableRes imagePressed: Int = R.drawable.calculator_button_grey_pressed_fullsize,
+    fontSize: TextUnit = TextUnit.Unspecified
 ) {
     var pressed by remember { mutableStateOf(false) }
 
@@ -69,9 +74,9 @@ fun CalculatronButton(
                 painter = painterResource(
                     if (enabled) {
                         if (pressed) {
-                            R.drawable.calculator_button_grey_pressed_fullsize
+                            imagePressed
                         } else {
-                            R.drawable.calculator_button_grey_fullsize
+                            image
                         }
                     } else {
                         R.drawable.calculator_button_empty_fullsize
@@ -82,7 +87,10 @@ fun CalculatronButton(
         horizontalArrangement = Arrangement.Center,
         verticalAlignment = Alignment.CenterVertically
     ) {
-        Text(text)
+        Text(
+            text = text,
+            fontSize = fontSize
+        )
     }
 }
 

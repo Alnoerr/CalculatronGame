@@ -36,7 +36,7 @@ fun StartScreen(
     ) {
         Text(
             text = stringResource(R.string.main_title),
-            style = MaterialTheme.typography.displayLarge
+            style = MaterialTheme.typography.displayMedium
         )
 
         Spacer(Modifier.height(64.dp))
