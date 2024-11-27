@@ -1,7 +1,10 @@
 package com.xren.calculatorgame
 
+import android.app.Activity
+import android.content.pm.ActivityInfo
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
+import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
@@ -23,8 +26,11 @@ fun CalculatronGameNavGraph(
     navController: NavHostController = rememberNavController(),
     viewModel: CalculatorGameViewModel = viewModel(factory = CalculatorGameViewModel.Factory)
 ) {
+    val activity = LocalContext.current as Activity
     val uiState = viewModel.uiState.collectAsState().value
     val maxLevel = viewModel.maxLevel.collectAsState().value
+
+    activity.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
 
     NavHost(
         navController = navController,
