@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">calculatorgame</string>
+    <string name="app_name">Calculatron</string>
     <string name="main_title">Calculatron\nGame</string>
     <string name="start_game">Начать&#xA0;игру</string>
     <string name="continue_game">Продолжить\nигру</string>
