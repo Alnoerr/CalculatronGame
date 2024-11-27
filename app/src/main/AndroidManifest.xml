@@ -11,26 +11,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Calculatorgame"
+        android:theme="@style/Theme.CalculatorGame"
         tools:targetApi="31">
-        <activity
-            android:name=".LevelMenuActivity"
-            android:exported="false" />
-        <activity
-            android:name=".LevelPassedActivity"
-            android:exported="false" />
-        <activity
-            android:name=".LevelFailedActivity"
-            android:exported="false" />
-        <activity
-            android:name=".GuideActivity"
-            android:exported="false" />
-        <activity
-            android:name=".LevelsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".GameActivity"
-            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
