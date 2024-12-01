@@ -23,6 +23,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.xren.calculatorgame.AdMobBanner
 import com.xren.calculatorgame.R
 import com.xren.calculatorgame.data.levels
 import com.xren.calculatorgame.ui.theme.Bone
@@ -185,6 +186,7 @@ fun GameContent(
                 }
             }
         }
+        AdMobBanner()
     }
 }
 
