@@ -91,6 +91,7 @@ fun GameContent(
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = modifier
             .background(Bone)
+            .padding(8.dp)
             .fillMaxSize()
     ) {
         Box(Modifier.padding(top = 20.dp)) {
