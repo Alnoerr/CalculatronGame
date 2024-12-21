@@ -114,7 +114,7 @@ fun GameContent(
                 modifier = Modifier
                     .padding(
                         top = 104.dp,
-                        end = 108.dp
+                        end = (108 - 12*(uiState.level.target.toString().length - 1)).dp
                     )
                     .align(Alignment.TopEnd)
             )
